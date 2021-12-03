@@ -19,10 +19,10 @@ leaderboard:
   - id: 1
     schema:
       {
-        "labels": ["F1"],
-        "default_order_by": "F1",
+        "labels": ["F1-score"],
+        "default_order_by": "F1-score",
         "metadata": {
-          "F1": {
+          "F1-score": {
             "sort_ascending": True,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           },
