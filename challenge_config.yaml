@@ -21,12 +21,12 @@ leaderboard:
       {
         "labels": ["F1-score"],
         "default_order_by": "F1-score",
-        "metadata": {
-          "F1-score": {
-            "sort_ascending": True,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          },
-        }
+        # "metadata": {
+        #  "F1-score": {
+        #    "sort_ascending": True,
+        #    "description": "Macro F1 for mutiple classification",
+        #  },
+        #}
       }
 
 challenge_phases:
@@ -54,14 +54,14 @@ challenge_phases:
         is_visible: False
     is_restricted_to_select_one_submission: False
     is_partial_submission_evaluation_enabled: False
-    allowed_submission_file_types: ".json, .zip, .txt, .tsv, .gz, .csv, .h5, .npy, .npz"
+    allowed_submission_file_types: ".json, .csv"
 
 dataset_splits:
   - id: 1
-    name: Train Split
+    name: A榜
     codename: train_split
   - id: 2
-    name: Test Split
+    name: B榜
     codename: test_split
 
 challenge_phase_splits:
