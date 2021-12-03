@@ -1,6 +1,6 @@
 # If you are not sure what all these fields mean, please refer our documentation here:
 # https://evalai.readthedocs.io/en/latest/configuration.html
-title: Random Number Generator Challenge
+title: 一个测试的中文标题
 short_description: Random number generation challenge for each submission
 description: templates/description.html
 evaluation_details: templates/evaluation_details.html
@@ -35,7 +35,7 @@ leaderboard:
 
 challenge_phases:
   - id: 1
-    name: Dev Phase
+    name: 预赛
     description: templates/challenge_phase_1_description.html
     leaderboard_public: False
     is_public: True
@@ -49,35 +49,18 @@ challenge_phases:
     max_submissions: 50
     default_submission_meta_attributes:
       - name: method_name
-        is_visible: True
+        is_visible: False
       - name: method_description
-        is_visible: True
+        is_visible: False
       - name: project_url
-        is_visible: True
+        is_visible: False
       - name: publication_url
-        is_visible: True
-    submission_meta_attributes:
-      - name: TextAttribute
-        description: Sample
-        type: text
-        required: False
-      - name: SingleOptionAttribute
-        description: Sample
-        type: radio
-        options: ["A", "B", "C"]
-      - name: MultipleChoiceAttribute
-        description: Sample
-        type: checkbox
-        options: ["alpha", "beta", "gamma"]
-      - name: TrueFalseField
-        description: Sample
-        type: boolean
-        required: True
+        is_visible: False
     is_restricted_to_select_one_submission: False
     is_partial_submission_evaluation_enabled: False
     allowed_submission_file_types: ".json, .zip, .txt, .tsv, .gz, .csv, .h5, .npy, .npz"
   - id: 2
-    name: Test Phase
+    name: 决赛
     description: templates/challenge_phase_2_description.html
     leaderboard_public: True
     is_public: True
@@ -91,28 +74,13 @@ challenge_phases:
     max_submissions: 50
     default_submission_meta_attributes:
       - name: method_name
-        is_visible: True
+        is_visible: False
       - name: method_description
-        is_visible: True
+        is_visible: False
       - name: project_url
-        is_visible: True
+        is_visible: False
       - name: publication_url
-        is_visible: True
-    submission_meta_attributes:
-      - name: TextAttribute
-        description: Sample
-        type: text
-      - name: SingleOptionAttribute
-        description: Sample
-        type: radio
-        options: ["A", "B", "C"]
-      - name: MultipleChoiceAttribute
-        description: Sample
-        type: checkbox
-        options: ["alpha", "beta", "gamma"]
-      - name: TrueFalseField
-        description: Sample
-        type: boolean
+        is_visible: False
     is_restricted_to_select_one_submission: False
     is_partial_submission_evaluation_enabled: False
 
@@ -128,7 +96,7 @@ challenge_phase_splits:
   - challenge_phase_id: 1
     leaderboard_id: 1
     dataset_split_id: 1
-    visibility: 1
+    visibility: 3
     leaderboard_decimal_precision: 2
     is_leaderboard_order_descending: True
   - challenge_phase_id: 2
@@ -140,6 +108,6 @@ challenge_phase_splits:
   - challenge_phase_id: 2
     leaderboard_id: 1
     dataset_split_id: 2
-    visibility: 1
+    visibility: 3
     leaderboard_decimal_precision: 2
     is_leaderboard_order_descending: True
