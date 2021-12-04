@@ -39,6 +39,8 @@ def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwarg
             'submitted_at': u'2017-03-20T19:22:03.880652Z'
         }
     """
+    print(test_annotation_file)
+    print(user_submission_file)
     print(phase_codename)
     output = {}
     if phase_codename == "dev":
@@ -46,6 +48,13 @@ def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwarg
         output["result"] = [
             {
                 "train_split": {
+                    "Acurracy(%)": random.randint(0, 99),
+                    "Recall(%)": random.randint(0, 99),
+                    "F1-score": random.randint(0, 99),
+                },
+                "test_split": {
+                    "Acurracy(%)": random.randint(0, 99),
+                    "Recall(%)": random.randint(0, 99),
                     "F1-score": random.randint(0, 99),
                 }
             }
@@ -57,7 +66,14 @@ def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwarg
         print("Evaluating for Test Phase")
         output["result"] = [
             {
+                "train_split": {
+                    "Acurracy(%)": random.randint(0, 99),
+                    "Recall(%)": random.randint(0, 99),
+                    "F1-score": random.randint(0, 99),
+                },
                 "test_split": {
+                    "Acurracy(%)": random.randint(0, 99),
+                    "Recall(%)": random.randint(0, 99),
                     "F1-score": random.randint(0, 99),
                 }
             },
