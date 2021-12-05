@@ -43,42 +43,25 @@ def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwarg
     print(user_submission_file)
     print(phase_codename)
     output = {}
-    if phase_codename == "dev":
-        print("Evaluating for Dev Phase")
-        output["result"] = [
-            {
-                "train_split": {
-                    "Acurracy(%)": random.randint(0, 99),
-                    "Recall(%)": random.randint(0, 99),
-                    "F1-score": random.randint(0, 99),
-                },
-                "test_split": {
-                    "Acurracy(%)": random.randint(0, 99),
-                    "Recall(%)": random.randint(0, 99),
-                    "F1-score": random.randint(0, 99),
-                }
-            }
-        ]
-        # To display the results in the result file
-        output["submission_result"] = output["result"][0]["train_split"]
-        print("Completed evaluation for Dev Phase")
-    elif phase_codename == "test":
-        print("Evaluating for Test Phase")
-        output["result"] = [
-            {
-                "train_split": {
-                    "Acurracy(%)": random.randint(0, 99),
-                    "Recall(%)": random.randint(0, 99),
-                    "F1-score": random.randint(0, 99),
-                },
-                "test_split": {
-                    "Acurracy(%)": random.randint(0, 99),
-                    "Recall(%)": random.randint(0, 99),
-                    "F1-score": random.randint(0, 99),
-                }
+    print("Evaluating for Test Phase")
+    print('111111111')
+    output["result"] = [
+        {
+            "train_split": {
+                "Acurracy(%)": random.randint(0, 99),
+                "Recall(%)": random.randint(0, 99),
+                "F1-score": random.randint(0, 99),
             },
-        ]
-        # To display the results in the result file
-        output["submission_result"] = output["result"][0]
-        print("Completed evaluation for Test Phase")
+        },
+        {
+            "test_split": {
+                "Acurracy(%)": random.randint(0, 99),
+                "Recall(%)": random.randint(0, 99),
+                "F1-score": random.randint(0, 99),
+            },
+        },
+    ]
+    # To display the results in the result file
+    output["submission_result"] = output["result"][0]
+    print("Completed evaluation for Test Phase")
     return output
